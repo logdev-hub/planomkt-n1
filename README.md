@@ -1,17 +1,10 @@
 # Projeto Pronto Cozinha - Material Didático Interativo
 
 <div align="center">
-  <div style="position: relative; width: 100%; max-width: 960px; padding-bottom: 56.25%; height: 0;">
-    <iframe
-      src="https://www.youtube.com/embed/cONK1UW_H4I?si=J_zXHbwnRGEP6dcz"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-      style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"
-    ></iframe>
-  </div>
+  <a href="https://www.youtube.com/watch?v=cONK1UW_H4I" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/cONK1UW_H4I/hqdefault.jpg" alt="Assista ao vídeo no YouTube" width="800" />
+  </a>
+  <p><a href="https://www.youtube.com/watch?v=cONK1UW_H4I" target="_blank" rel="noopener noreferrer"><strong>▶ Assista ao vídeo no YouTube</strong></a></p>
 </div>
 
 ## Descrição breve
