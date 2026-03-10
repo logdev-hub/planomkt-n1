@@ -1,0 +1,340 @@
+:root {
+  --cor-fundo: #f9f4eb;
+  --cor-painel: #fffdf8;
+  --cor-principal: #0f4c5c;
+  --cor-secundaria: #e36414;
+  --cor-suporte: #2f855a;
+  --cor-texto: #2c2c2c;
+  --cor-borda: #e6dccb;
+  --sombra-media: 0 10px 30px rgba(15, 76, 92, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--cor-texto);
+  background: radial-gradient(circle at 10% 0%, #ffeccf 0%, #f9f4eb 35%, #f7f1e6 100%);
+  font-family: "Nunito", sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(transparent 95%, rgba(15, 76, 92, 0.04) 95%);
+  background-size: 100% 34px;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bree Serif", serif;
+  color: #12303d;
+}
+
+.cabecalho-principal {
+  background: linear-gradient(130deg, #0f4c5c 0%, #0f4c5c 45%, #e36414 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.cabecalho-principal .container {
+  position: relative;
+  z-index: 1;
+}
+
+.cabecalho-principal::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  right: -90px;
+  top: -70px;
+  background: rgba(255, 255, 255, 0.12);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.titulo-principal,
+.subtitulo-principal,
+.selo-topo {
+  color: #fff;
+}
+
+.titulo-principal {
+  font-size: clamp(1.85rem, 2.7vw, 2.9rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.subtitulo-principal {
+  max-width: 720px;
+  font-size: 1.07rem;
+}
+
+.selo-topo {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.btn-acao-principal {
+  background: #fb8b24;
+  border: none;
+  color: #1e1e1e;
+  font-weight: 800;
+  padding: 0.8rem 1.25rem;
+}
+
+.btn-acao-principal:hover {
+  background: #ff9e3f;
+  color: #171717;
+}
+
+.cartao-sinopse,
+.cartao-personagem,
+.cartao-etapa,
+.cartao-dialogo,
+.cartao-docente,
+.cartao-revisao,
+.cartao-saiba-mais,
+.cartao-entrega,
+.cartao-glossario,
+.cartao-painel {
+  background: var(--cor-painel);
+  border: 1px solid var(--cor-borda);
+  border-radius: 18px;
+  box-shadow: var(--sombra-media);
+  padding: 1.1rem 1.2rem;
+}
+
+.cartao-sinopse {
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.97);
+  color: #21313a;
+}
+
+.cartao-sinopse h2,
+.cartao-sinopse p,
+.cartao-sinopse strong {
+  color: #21313a;
+}
+
+.cartao-personagem {
+  min-height: 150px;
+  animation: entrar-bloco 0.6s ease both;
+}
+
+.cartao-personagem:nth-child(1) { animation-delay: 0.06s; }
+.cartao-personagem:nth-child(2) { animation-delay: 0.12s; }
+.cartao-personagem:nth-child(3) { animation-delay: 0.18s; }
+
+.navegador-etapas .nav-link {
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid #c8d5db;
+  color: #1a3f4b;
+  background: #f3f8fa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navegador-etapas .nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(15, 76, 92, 0.14);
+}
+
+.navegador-etapas .nav-link.active {
+  background: linear-gradient(90deg, #0f4c5c 0%, #126077 100%);
+  border-color: #0f4c5c;
+  color: #fff;
+}
+
+.etapa-codigo {
+  color: var(--cor-secundaria);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+.texto-introducao {
+  font-size: 1rem;
+  line-height: 1.58;
+}
+
+.lista-checklist .form-check {
+  border-bottom: 1px dashed #e8ddca;
+  padding: 0.45rem 0;
+}
+
+.lista-checklist .form-check-label {
+  line-height: 1.45;
+}
+
+.lista-checklist .form-check-input:checked {
+  background-color: var(--cor-suporte);
+  border-color: var(--cor-suporte);
+}
+
+.cartao-dialogo {
+  position: relative;
+  overflow: hidden;
+}
+
+.cartao-dialogo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom right, rgba(15, 76, 92, 0.04), rgba(227, 100, 20, 0.04));
+}
+
+.progress {
+  height: 0.66rem;
+  background: #efe4d5;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #0f4c5c 0%, #e36414 100%);
+}
+
+.bolha-fala {
+  position: relative;
+  border-radius: 16px;
+  padding: 1rem 1rem 0.95rem;
+  border: 1px solid #d9e2e6;
+  line-height: 1.58;
+  background: #ffffff;
+  min-height: 180px;
+  animation: trocar-fala 0.35s ease;
+}
+
+.bolha-fala-consultora {
+  border-left: 6px solid #0f4c5c;
+}
+
+.bolha-fala-empreendedor {
+  border-left: 6px solid #e36414;
+}
+
+.bolha-fala-docente {
+  border-left: 6px solid #2f855a;
+}
+
+.cartao-docente {
+  border-left: 8px solid #2f855a;
+  background: #f4fbf7;
+}
+
+.cartao-revisao ul {
+  padding-left: 1.1rem;
+}
+
+.cartao-revisao li,
+.cartao-saiba-mais p,
+.cartao-entrega p {
+  line-height: 1.55;
+}
+
+.cartao-glossario .bloco-termo {
+  border: 1px solid #e0d5c2;
+  border-radius: 14px;
+  padding: 0.85rem;
+  height: 100%;
+  background: #fff;
+}
+
+.cartao-painel {
+  height: 100%;
+  background: #fffefb;
+  border-left: 6px solid #0f4c5c;
+}
+
+.accordion-item {
+  border: 1px solid #e4d8c6;
+  border-radius: 12px !important;
+  overflow: hidden;
+  margin-bottom: 0.65rem;
+}
+
+.accordion-button {
+  font-weight: 700;
+  color: #163844;
+  background: #fff9f0;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #123645;
+  background: #ffe7cb;
+}
+
+.rodape {
+  background: #0f4c5c;
+  color: #fff;
+}
+
+.animar-entrada {
+  animation: entrar-bloco 0.55s ease both;
+}
+
+@keyframes entrar-bloco {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes trocar-fala {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 991px) {
+  .titulo-principal {
+    font-size: clamp(1.65rem, 7vw, 2.3rem);
+  }
+
+  .bolha-fala {
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cartao-sinopse,
+  .cartao-personagem,
+  .cartao-etapa,
+  .cartao-dialogo,
+  .cartao-docente,
+  .cartao-revisao,
+  .cartao-saiba-mais,
+  .cartao-entrega,
+  .cartao-glossario,
+  .cartao-painel {
+    border-radius: 14px;
+    padding: 0.95rem;
+  }
+
+  .navegador-etapas .nav-link {
+    width: 100%;
+    text-align: left;
+  }
+}
